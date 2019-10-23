@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Test de Campagne</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Test de Campagne</h1>
+    <main>
+
+        <!-- Ajout de personnages -->
+        <section id="addSection">
+            <h2>Ajout de personnages</h2>
+
+            <label for="name">Nom : </label>
+            <input type="text" name="name" id="nameInput"/>
+
+            <label for="type">Type : </label>
+            <select name="type" id="typeInput">
+                <option value="player">Joueur</option>
+                <option value="ennemy">Adversaire</option>
+            </select>
+
+            <label for="archetype">Archétype : </label>
+            <select name="archetype" id="archInput">
+                <option value="tank">Défenseur</option>
+                <option value="dpsF">Attaquant force</option>
+                <option value="dpsD">Attaquant dextérité</option>
+                <option value="dpsM">Attaquant magique</option>
+                <option value="heal">Soigneur</option>
+                <option value="pet">Familier</option>
+            </select>
+
+            <button id="addBtn">Ajouter</button>
+            <span id="alert"></span>
+        </section>
+
+        <!-- Liste des personnages -->
+        <section id="caracSection">
+            <h2>Protagonistes</h2>
+            <div>
+                <h3>Joueurs</h3>
+                <ul id="playersUl"></ul>
+            </div>
+            <div>
+                <h3>Adversaires</h3>
+                <ul id="ennemiesUl"></ul>
+            </div>
+            <div>
+                <h3>Vaincus</h3>
+                <ul id="cemetaryUl"></ul>
+            </div>
+        </section>
+        
+        <!-- Section Simulation -->
+        <section id="simulSection">
+            <h2>Simulation</h3>
+                <article>
+                        <label for="caracWho">Acteur : </label>
+                        <select name="caracWho" id="caracWho">
+                        </select>
+                        <label for="caracAct"> Action : </label>
+                        <select name="caracAct" id="caracAct">
+                            <option value="atkP">Attaque Physique</option>
+                            <option value="atkM">Attaque Magique</option>
+                            <option value="heal">Soin</option>
+                        </select>
+                        <label for="caracTarg"> Cible : </label>
+                        <select name="caracTarg" id="caracTarg">
+                        </select>
+                </article>
+                <article>
+                    <input type="number" name="DiceBtn" id="diceInput" min="0" max="999"/>
+                    <button id="diceBtn">Utiliser un dé 1000</button>
+                    <button id="aleaDiceBtn">Lancer un dé 1000</button>
+                </article>
+            <article id="simulation"></article>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
